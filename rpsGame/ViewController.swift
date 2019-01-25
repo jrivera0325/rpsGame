@@ -10,11 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rockImageView: UIImageView!
+    @IBOutlet weak var paperImageView: UIImageView!
+    @IBOutlet weak var sissorsImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-
+    @IBAction func goAction(_ sender: UIButton) {
+        
+    }
+    
+    
+    
+    
+    
+    
 }
 
