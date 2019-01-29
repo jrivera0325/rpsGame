@@ -23,7 +23,17 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func rockPicked(_ sender: UITapGestureRecognizer) {
+        print("image tapped")
+    }
     
+    @IBAction func paperPicked(_ sender: UITapGestureRecognizer) {
+        
+    }
+    
+    @IBAction func sissorsPicked(_ sender: UITapGestureRecognizer) {
+        
+    }
     
     
     
