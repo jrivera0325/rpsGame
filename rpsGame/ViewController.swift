@@ -13,30 +13,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var rockImageView: UIImageView!
     @IBOutlet weak var paperImageView: UIImageView!
     @IBOutlet weak var sissorsImageView: UIImageView!
+    @IBOutlet weak var yourChoice: UIImageView!
+    @IBOutlet weak var computersChoice: UIImageView!
+    @IBOutlet weak var stackView: UIStackView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let allImages: [UIImageView] = [rockImageView, paperImageView, sissorsImageView]
+        
+        image()
     }
 
     @IBAction func goAction(_ sender: UIButton) {
         
     }
     
-    @IBAction func rockPicked(_ sender: UITapGestureRecognizer) {
-        print("image tapped")
+    @IBAction func whenTapped(_ sender: UITapGestureRecognizer) {
+        image()
     }
     
-    @IBAction func paperPicked(_ sender: UITapGestureRecognizer) {
+    func image() {
+        yourChoice = allImages
         
     }
-    
-    @IBAction func sissorsPicked(_ sender: UITapGestureRecognizer) {
-        
-    }
-    
-    
-    
     
 }
 

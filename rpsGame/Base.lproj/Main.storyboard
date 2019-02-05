@@ -42,9 +42,6 @@
                                             <constraint firstAttribute="width" constant="96" id="pr2-ox-OW3"/>
                                             <constraint firstAttribute="height" constant="76" id="xDm-OY-Vf4"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="1hT-EZ-Zrm" appends="YES" id="0cy-4o-hMG"/>
-                                        </connections>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="6SB-Rd-kld">
                                         <rect key="frame" x="126" y="0.0" width="119" height="76"/>
@@ -53,9 +50,6 @@
                                             <constraint firstAttribute="width" constant="119" id="v2O-ic-523"/>
                                             <constraint firstAttribute="height" constant="76" id="wti-5x-xCJ"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="bk2-03-ici" appends="YES" id="PRA-ZY-Jf2"/>
-                                        </connections>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scissors" translatesAutoresizingMaskIntoConstraints="NO" id="7kf-ej-HUL">
                                         <rect key="frame" x="275" y="0.0" width="76" height="76"/>
@@ -64,11 +58,12 @@
                                             <constraint firstAttribute="width" constant="76" id="1A2-u8-P6n"/>
                                             <constraint firstAttribute="height" constant="82" id="I1P-bG-ed5"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="O1y-Rs-rvl" appends="YES" id="mjS-63-ZgM"/>
-                                        </connections>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vaL-Ag-7UW" appends="YES" id="X2g-uE-3bm"/>
+                                </connections>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="GPn-on-cQ0">
                                 <rect key="frame" x="40" y="599" width="319.5" height="20.5"/>
@@ -129,25 +124,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="computersChoice" destination="tv4-FL-l3q" id="X37-NI-h9D"/>
                         <outlet property="paperImageView" destination="6SB-Rd-kld" id="6ks-4b-Zd2"/>
                         <outlet property="rockImageView" destination="Pbn-9R-Kia" id="6Wz-OJ-LZR"/>
                         <outlet property="sissorsImageView" destination="7kf-ej-HUL" id="C1l-Dw-san"/>
+                        <outlet property="stackView" destination="ttA-NF-rSC" id="V0O-Pn-cT8"/>
+                        <outlet property="yourChoice" destination="8B3-3T-OVa" id="Eeg-6j-g2a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="1hT-EZ-Zrm">
+                <tapGestureRecognizer id="vaL-Ag-7UW">
                     <connections>
-                        <action selector="rockPicked:" destination="BYZ-38-t0r" id="Sje-XG-eIv"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="bk2-03-ici">
-                    <connections>
-                        <action selector="paperPicked:" destination="BYZ-38-t0r" id="OvM-c3-qz2"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="O1y-Rs-rvl">
-                    <connections>
-                        <action selector="sissorsPicked:" destination="BYZ-38-t0r" id="Qtw-LL-War"/>
+                        <action selector="whenTapped:" destination="BYZ-38-t0r" id="iJ4-KX-eDj"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
