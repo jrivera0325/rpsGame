@@ -17,11 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var computersChoice: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
     
+    var counter: Int = 0
+    
+    var allImages: [UIImageView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let allImages: [UIImageView] = [rockImageView, paperImageView, sissorsImageView]
+         allImages = [rockImageView, paperImageView, sissorsImageView]
         
         image()
     }
@@ -31,13 +34,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func whenTapped(_ sender: UITapGestureRecognizer) {
+        let selectedPoint = sender.location(in: stackView)
+        for currentImage in allImages {
+            if currentImage.frame.contains(selectedPoint) {
+                yourChoice = currentImage
+            }
+        }
+        counter += 1
+        if counter == 3 {
+            counter = reSetCounter()
+        }
         image()
     }
     
     func image() {
-        yourChoice = allImages
-        
+        yourChoice = allImages[counter]
+
     }
     
+    func reSetCounter() -> Int
+    {
+        let alert = UIAlertController(title: "restting Counter", message: nil, preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Okay", style: .default) { (action) in for allImages in self.allImages{
+            self.yourChoice = self.rockImageView
+            }
+    }
+        alert.addAction(okayAction)
+        present(alert,animated: true, completion: nil)
+        return 0
 }
 
+}
